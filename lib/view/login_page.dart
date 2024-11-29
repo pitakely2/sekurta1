@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:provider/provider.dart';
-import 'login_viewmodel.dart';
+import 'package:sekurta/viewmodels/login_viewmodel.dart';
 
 class LoginPage extends StatelessWidget {
   final TextEditingController emailController = TextEditingController();
   final TextEditingController passwordController = TextEditingController();
+  
+  get Provider => null;
 
   @override
   Widget build(BuildContext context) {
@@ -30,7 +31,7 @@ class LoginPage extends StatelessWidget {
               onPressed: () async {
                 final email = emailController.text;
                 final password = passwordController.text;
-
+                
                 final user = await loginViewModel.login(email, password);
 
                 if (user != null) {

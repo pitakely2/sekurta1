@@ -1,7 +1,7 @@
-<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+<manifest package package="com.sekurta.app">
     <application
         android:label="sekurta"
-        android:name="${applicationName}"
+        android:name="${app}"
         android:icon="@mipmap/ic_launcher">
         <activity
             android:name=".MainActivity"
